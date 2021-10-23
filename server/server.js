@@ -11,9 +11,8 @@ db.authenticate()
 	.then(() => console.log('Connection has been established successfully.'))
 	.catch((err) => console.error('Unable to connect to the database:', err));
 
-const duck = require('./models/duckFeedModel');
 // Syncs models to database
-db.sync({ force: true });
+db.sync({ alter: true });
 
 // Body parser middlewares
 app.use(express.json());
