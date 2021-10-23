@@ -3,15 +3,17 @@ const express = require('express');
 const dataRouter = require('./routes/data');
 const app = express();
 
-// database routing
-// const db = require('./config/database');
-// Test DB
-// db.authenticate()
-// 	.then(() => console.log('Connection has been established successfully.'))
-// 	.catch((err) => console.error('Unable to connect to the database:', err));
+// database
+const db = require('./config/database');
 
-// // Syncs models to database
-// db.sync({ alter: true });
+// Test DB
+db.authenticate()
+	.then(() => console.log('Connection has been established successfully.'))
+	.catch((err) => console.error('Unable to connect to the database:', err));
+
+const duck = require('./models/duckFeedModel');
+// Syncs models to database
+db.sync({ force: true });
 
 // Body parser middlewares
 app.use(express.json());
@@ -25,5 +27,11 @@ app.use('/data', dataRouter);
 // Run sevrer
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+	console.log(`listening at http://localhost:${port}`);
 });
+
+// DB_SERVER = localhost
+// DB_PORT = 3306
+// DB_NAME = freshworks
+// DB_USER = root
+// DB_PASS =
