@@ -1,9 +1,9 @@
-import TableHeader from './Util/TableHeader';
+import Table from './Table';
 
 const MainContent = () => {
 	return (
-		<div className='w-full bg-gray-200 flex '>
-			<TableHeader />
+		<div className='flex justify-center items-middle '>
+			<Table />
 		</div>
 	);
 };
