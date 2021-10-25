@@ -14,7 +14,7 @@ const Table = () => {
 	}, []);
 
 	return (
-		<div className='h-80 min-w-96 overflow-y-scroll flex justify-center bg-white rounded'>
+		<div className='h-80 overflow-y-scroll flex justify-center bg-white rounded'>
 			<table className=''>
 				<thead className='border-b-8 border-gray-300'>
 					<TableHead
@@ -28,7 +28,9 @@ const Table = () => {
 
 				<tbody className='divide-y overflow-y-scroll'>
 					{incomingData === undefined ? (
-						<h2> loading </h2>
+						<tr>
+							<td>loading</td>
+						</tr>
 					) : (
 						incomingData.map((row) => (
 							<TableRow

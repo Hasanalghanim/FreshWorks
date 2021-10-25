@@ -4,9 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				myDarkBlue: '#9A5CE0',
-				myLightBlue: '#20368F',
-				hoverAccent: '#EBEBEB',
+				myDarkBlue: '#2A0C4E',
+				hoverAccent: '#552f82',
 			},
 		},
 	},
