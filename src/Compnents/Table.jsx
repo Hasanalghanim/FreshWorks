@@ -14,9 +14,9 @@ const Table = () => {
 	}, []);
 
 	return (
-		<div className='h-80 overflow-y-scroll flex justify-center bg-white rounded'>
-			<table className=''>
-				<thead className='border-b-8 border-gray-300'>
+		<div className='h-96 overflow-y-scroll flex justify-center bg-white rounded border-b-4 border-myLightPurple'>
+			<table className='w-full'>
+				<thead className='border-b-8 border-gray-300 bg-myLightPurple sticky top-0'>
 					<TableHead
 						headerOne='Time'
 						headerTwo='Location'
