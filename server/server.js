@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const dataRouter = require('./routes/data');
+const cors = require('cors');
 const app = express();
 
 // database
@@ -16,6 +17,13 @@ db.sync({ alter: true });
 
 // Body parser middlewares
 app.use(express.json());
+
+app.use(
+	cors({
+		origin: ['http://localhost:3000', process.env.APP_URL],
+		credentials: true,
+	})
+);
 
 app.get('/', (req, res) => {
 	res.send('Ducks API index Page');
