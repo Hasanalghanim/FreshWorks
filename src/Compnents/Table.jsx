@@ -7,12 +7,15 @@ import axios from 'axios';
 const Table = () => {
 	const [incomingData, setIncomingData] = useState();
 
+	// on Component Render, Axios get Request for All Data sets inComing Data state
+	// While Data === Undefind, Loading status shows
 	useEffect(() => {
 		axios
 			.get('http://localhost:5000/data')
 			.then((res) => setIncomingData(res.data));
 	}, []);
-
+	// Table Rows get mapped with IncomingData State Var.
+	// Eash Indx gets a <TableRow />
 	return (
 		<div className='h-96 overflow-y-scroll flex justify-center bg-white rounded border-b-4 border-myLightPurple'>
 			<table className='w-full'>
@@ -37,7 +40,7 @@ const Table = () => {
 								key={row.Id}
 								dataOne={row.time}
 								dataTwo={row.location}
-								dataThree={row.foodType}
+								dataThree={row.typeOfFood}
 								dataFour={row.amountOfFood}
 								dataFive={row.amountOfDucks}
 							/>

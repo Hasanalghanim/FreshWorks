@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize');
 
+// DataBase INFO from .ENV
 module.exports = new Sequelize({
 	username: process.env.DB_USER,
 	password: process.env.DB_PASS,

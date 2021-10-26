@@ -18,6 +18,7 @@ db.sync({ alter: true });
 // Body parser middlewares
 app.use(express.json());
 
+//Allows All requestcoming from LH or APP_URL
 app.use(
 	cors({
 		origin: ['http://localhost:3000', process.env.APP_URL],
@@ -36,9 +37,3 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`listening at http://localhost:${port}`);
 });
-
-// DB_SERVER = localhost
-// DB_PORT = 3306
-// DB_NAME = freshworks
-// DB_USER = root
-// DB_PASS =

@@ -8,27 +8,21 @@ const DuckFeed = db.define(
 			type: Sequelize.INTEGER(11),
 			primaryKey: true,
 			autoIncrement: true,
-			allowNull: false,
 		},
 		time: {
 			type: Sequelize.STRING(50),
-			allowNull: false,
 		},
 		typeOfFood: {
 			type: Sequelize.STRING(50),
-			allowNull: false,
 		},
 		location: {
 			type: Sequelize.STRING(50),
-			allowNull: false,
 		},
 		amountOfDucks: {
 			type: Sequelize.STRING(50),
-			allowNull: false,
 		},
 		amountOfFood: {
 			type: Sequelize.STRING(50),
-			allowNull: false,
 		},
 	},
 	{
