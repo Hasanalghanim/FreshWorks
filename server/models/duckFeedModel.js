@@ -11,9 +11,10 @@ const DuckFeed = db.define(
 			allowNull: false,
 		},
 		time: {
-			type: Sequelize.INTEGER(11),
+			type: Sequelize.STRING(50),
+			allowNull: false,
 		},
-		foodType: {
+		typeOfFood: {
 			type: Sequelize.STRING(50),
 			allowNull: false,
 		},
@@ -22,11 +23,11 @@ const DuckFeed = db.define(
 			allowNull: false,
 		},
 		amountOfDucks: {
-			type: Sequelize.INTEGER(3),
+			type: Sequelize.STRING(50),
 			allowNull: false,
 		},
 		amountOfFood: {
-			type: Sequelize.INTEGER(3),
+			type: Sequelize.STRING(50),
 			allowNull: false,
 		},
 	},

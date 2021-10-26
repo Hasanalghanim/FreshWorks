@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-	const { time, foodType, location, amountOfDucks, amountOfFood } = req.body;
+	const { time, typeOfFood, location, amountOfDucks, amountOfFood } = req.body;
 	Duck.create({
-		foodType: foodType,
+		typeOfFood: typeOfFood,
 		time: time,
 		location: location,
 		amountOfDucks: amountOfDucks,
@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 	});
 	res.status(200).send({
 		time,
-		foodType,
+		typeOfFood,
 		location,
 		amountOfDucks,
 		amountOfFood,

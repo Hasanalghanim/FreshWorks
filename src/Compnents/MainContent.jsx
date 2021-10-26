@@ -7,8 +7,8 @@ import DashBoardBar from './Util/DashBoardBar';
 const MainContent = () => {
 	return (
 		<div className='m-4  max-h-96 space-y-6 '>
-			<DashBoardBar />
-			<Table className='' />
+			<DashBoardBar title='DashBoard' />
+			<Table />
 		</div>
 	);
 };

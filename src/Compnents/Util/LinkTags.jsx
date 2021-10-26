@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const SideBarLink = (props) => {
 	return (
 		<li
 			className={`flex items-center justify-center cursor-pointer lg:w-full lg:py-4 hover:${props.hover} ${props.bgColor}`}>
-			<i className='text-white'>{props.title}</i>
+			<Link className='text-white p-2' to={props.link}>
+				{props.title}
+			</Link>
 		</li>
 	);
 };

@@ -34,7 +34,7 @@ const Table = () => {
 					) : (
 						incomingData.map((row) => (
 							<TableRow
-								key={row.id}
+								key={row.Id}
 								dataOne={row.time}
 								dataTwo={row.location}
 								dataThree={row.foodType}

@@ -1,8 +1,10 @@
-const DashBoardBar = () => {
+const DashBoardBar = (props) => {
 	return (
 		<div className='text-white bg-myDarkPurple h-10 shadow-lg rounded'>
-			<div className='flex text-center justify-center'>
-				<h1 className='font-semibold tracking-wide'> Dashboard </h1>
+			<div className='h-full flex text-center justify-center '>
+				<h1 className='self-center font-semibold tracking-wide'>
+					{props.title}
+				</h1>
 			</div>
 		</div>
 	);
